@@ -194,29 +194,151 @@ def evaluate_algorithm(name: str, cfg: ExperimentConfig, agents: Dict[str, RLAge
     }
 
 
-def plot_results(train_df: pd.DataFrame, metrics_df: pd.DataFrame, out_dir: Path):
+def plot_training_curve(
+    train_df: pd.DataFrame,
+    out_dir: Path,
+    filename: str,
+    title: str,
+    metric: str = "avg_reward",
+    ylabel: str = "Reward",
+):
     plt.figure(figsize=(8, 4))
-    plt.plot(train_df["episode"], train_df["avg_reward"], alpha=0.35, label="Episode reward")
-    ma = moving_average(train_df["avg_reward"].tolist(), window=50)
-    if len(ma) > 0:
-        x = np.arange(50, 50 + len(ma)) if len(train_df) >= 50 else np.arange(1, len(ma) + 1)
-        plt.plot(x, ma, linewidth=2.0, label="MA(50)")
+    if "algorithm" in train_df.columns:
+        for name, group in train_df.groupby("algorithm", sort=False):
+            plt.plot(group["episode"], group[metric], alpha=0.25, linewidth=0.8)
+            ma = moving_average(group[metric].tolist(), window=50)
+            if len(ma) > 0:
+                x = (
+                    np.arange(50, 50 + len(ma))
+                    if len(group) >= 50
+                    else np.arange(1, len(ma) + 1)
+                )
+                plt.plot(x, ma, linewidth=2.0, label=f"{name} MA(50)")
+    else:
+        plt.plot(train_df["episode"], train_df[metric], alpha=0.35, label="Episode value")
+        ma = moving_average(train_df[metric].tolist(), window=50)
+        if len(ma) > 0:
+            x = (
+                np.arange(50, 50 + len(ma))
+                if len(train_df) >= 50
+                else np.arange(1, len(ma) + 1)
+            )
+            plt.plot(x, ma, linewidth=2.0, label="MA(50)")
     plt.xlabel("Episode")
-    plt.ylabel("Reward")
-    plt.title("RL Training Convergence")
+    plt.ylabel(ylabel)
+    plt.title(title)
     plt.legend()
     plt.tight_layout()
-    plt.savefig(out_dir / "fig_training_convergence.png", dpi=160)
+    plt.savefig(out_dir / filename, dpi=160)
     plt.close()
 
-    plt.figure(figsize=(8, 4))
-    order = metrics_df.sort_values("avg_secrecy_sum", ascending=False)
-    plt.bar(order["algorithm"], order["avg_secrecy_sum"])
-    plt.ylabel("Average Secrecy Sum Rate (bit/s/Hz)")
-    plt.title("Algorithm Comparison")
+
+def plot_metric_bar(
+    metrics_df: pd.DataFrame,
+    metric: str,
+    ylabel: str,
+    title: str,
+    filename: str,
+    out_dir: Path,
+    ascending: bool = False,
+):
+    plt.figure(figsize=(9, 4.5))
+    order = metrics_df.sort_values(metric, ascending=ascending)
+    plt.bar(order["algorithm"], order[metric])
+    plt.ylabel(ylabel)
+    plt.title(title)
     plt.xticks(rotation=20)
     plt.tight_layout()
-    plt.savefig(out_dir / "fig_algorithm_comparison.png", dpi=160)
+    plt.savefig(out_dir / filename, dpi=160)
+    plt.close()
+
+
+def plot_results(train_df: pd.DataFrame, metrics_df: pd.DataFrame, out_dir: Path):
+    plot_training_curve(
+        train_df,
+        out_dir,
+        filename="fig_training_convergence.png",
+        title="RL Training Reward Convergence",
+        metric="avg_reward",
+        ylabel="Reward",
+    )
+    plot_training_curve(
+        train_df,
+        out_dir,
+        filename="fig_training_secrecy_convergence.png",
+        title="RL Training Secrecy Sum Rate Convergence",
+        metric="avg_secrecy_sum",
+        ylabel="Average Secrecy Sum Rate (bit/s/Hz)",
+    )
+    plot_training_curve(
+        train_df,
+        out_dir,
+        filename="fig_training_qos_convergence.png",
+        title="RL Training QoS Satisfaction Convergence",
+        metric="qos_satisfaction_rate",
+        ylabel="QoS Satisfaction Rate",
+    )
+
+    plot_metric_bar(
+        metrics_df,
+        metric="avg_secrecy_sum",
+        ylabel="Average Secrecy Sum Rate (bit/s/Hz)",
+        title="Algorithm Comparison: Secrecy Sum Rate",
+        filename="fig_algorithm_comparison.png",
+        out_dir=out_dir,
+    )
+    plot_metric_bar(
+        metrics_df,
+        metric="qos_satisfaction_rate",
+        ylabel="QoS Satisfaction Rate",
+        title="Algorithm Comparison: QoS Satisfaction",
+        filename="fig_qos_satisfaction_comparison.png",
+        out_dir=out_dir,
+    )
+    plot_metric_bar(
+        metrics_df,
+        metric="secrecy_outage_prob",
+        ylabel="Secrecy Outage Probability",
+        title="Algorithm Comparison: Secrecy Outage",
+        filename="fig_secrecy_outage_comparison.png",
+        out_dir=out_dir,
+        ascending=True,
+    )
+    plot_metric_bar(
+        metrics_df,
+        metric="avg_decision_time_ms",
+        ylabel="Average Decision Time (ms)",
+        title="Algorithm Comparison: Decision Time",
+        filename="fig_decision_time_comparison.png",
+        out_dir=out_dir,
+        ascending=True,
+    )
+
+    rate_df = metrics_df.sort_values("avg_legit_rate_sum", ascending=False)
+    x = np.arange(len(rate_df))
+    width = 0.38
+    plt.figure(figsize=(9, 4.5))
+    plt.bar(x - width / 2, rate_df["avg_legit_rate_sum"], width, label="Legitimate users")
+    plt.bar(x + width / 2, rate_df["avg_eaves_rate_sum"], width, label="Eavesdropper")
+    plt.ylabel("Average Rate Sum (bit/s/Hz)")
+    plt.title("Algorithm Comparison: Legitimate vs Eavesdropper Rate")
+    plt.xticks(x, rate_df["algorithm"], rotation=20)
+    plt.legend()
+    plt.tight_layout()
+    plt.savefig(out_dir / "fig_legit_eaves_rate_comparison.png", dpi=160)
+    plt.close()
+
+    plt.figure(figsize=(9, 4.5))
+    order = metrics_df.sort_values("avg_secrecy_sum", ascending=False)
+    plt.plot(order["algorithm"], order["avg_secrecy_sum"], marker="o", label="Secrecy sum")
+    plt.plot(order["algorithm"], order["qos_satisfaction_rate"], marker="s", label="QoS satisfaction")
+    plt.plot(order["algorithm"], order["secrecy_outage_prob"], marker="^", label="Secrecy outage")
+    plt.ylabel("Metric Value")
+    plt.title("Algorithm Comparison: Security and Reliability Metrics")
+    plt.xticks(rotation=20)
+    plt.legend()
+    plt.tight_layout()
+    plt.savefig(out_dir / "fig_security_reliability_metrics.png", dpi=160)
     plt.close()
 
 
@@ -286,7 +408,7 @@ def main():
     metrics_df = pd.DataFrame(rows)
     metrics_df.to_csv(out_dir / "metrics_table.csv", index=False)
 
-    plot_results(train_df, metrics_df, out_dir)
+    plot_results(combined_train_df, metrics_df, out_dir)
     print("\n===== 评估结果 =====")
     print(metrics_df.to_string(index=False))
     print(f"\n结果已保存到: {out_dir}")
