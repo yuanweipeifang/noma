@@ -7,7 +7,7 @@ import random
 import time
 from dataclasses import asdict
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Protocol
 
 import numpy as np
 import pandas as pd
@@ -33,6 +33,16 @@ from noma_rl.baselines import (  # noqa: E402
 from noma_rl.config import ExperimentConfig  # noqa: E402
 from noma_rl.ddpg import DDPGAgent  # noqa: E402
 from noma_rl.env import NomaSecurityEnv  # noqa: E402
+from noma_rl.sac import SACAgent  # noqa: E402
+from noma_rl.td3 import TD3Agent  # noqa: E402
+
+
+class RLAgent(Protocol):
+    replay: object
+
+    def select_action(self, state: np.ndarray, noise_std: float = 0.05) -> np.ndarray: ...
+
+    def train_step(self) -> tuple[float, float]: ...
 
 
 def set_seed(seed: int):
@@ -50,14 +60,16 @@ def moving_average(x: List[float], window: int = 50) -> np.ndarray:
     return np.convolve(arr, kernel, mode="valid")
 
 
-def train_ddpg(cfg: ExperimentConfig, device: str, out_dir: Path):
+def train_agent(
+    name: str, agent_cls: type[RLAgent], cfg: ExperimentConfig, device: str, out_dir: Path
+):
     env = NomaSecurityEnv(cfg)
-    agent = DDPGAgent(cfg, device=device)
+    agent = agent_cls(cfg, device=device)
 
     episode_rewards, episode_secrecy, episode_qos = [], [], []
     actor_losses, critic_losses = [], []
 
-    for ep in trange(cfg.train_episodes, desc="Training DDPG"):
+    for ep in trange(cfg.train_episodes, desc=f"Training {name}"):
         state = env.reset()
         ep_reward = 0.0
         ep_rs = 0.0
@@ -85,8 +97,15 @@ def train_ddpg(cfg: ExperimentConfig, device: str, out_dir: Path):
         episode_secrecy.append(ep_rs / cfg.episode_steps)
         episode_qos.append(ep_qos_hits / cfg.episode_steps)
 
-    torch.save(agent.actor.state_dict(), out_dir / "ddpg_actor.pt")
-    torch.save(agent.critic.state_dict(), out_dir / "ddpg_critic.pt")
+    prefix = name.lower()
+    if hasattr(agent, "actor"):
+        torch.save(agent.actor.state_dict(), out_dir / f"{prefix}_actor.pt")
+    if hasattr(agent, "critic"):
+        torch.save(agent.critic.state_dict(), out_dir / f"{prefix}_critic.pt")
+    if hasattr(agent, "critic1"):
+        torch.save(agent.critic1.state_dict(), out_dir / f"{prefix}_critic1.pt")
+    if hasattr(agent, "critic2"):
+        torch.save(agent.critic2.state_dict(), out_dir / f"{prefix}_critic2.pt")
 
     train_df = pd.DataFrame(
         {
@@ -96,12 +115,18 @@ def train_ddpg(cfg: ExperimentConfig, device: str, out_dir: Path):
             "qos_satisfaction_rate": episode_qos,
         }
     )
-    train_df.to_csv(out_dir / "training_log.csv", index=False)
+    train_df.to_csv(out_dir / f"{prefix}_training_log.csv", index=False)
 
     return agent, train_df
 
 
-def evaluate_algorithm(name: str, cfg: ExperimentConfig, agent: DDPGAgent | None):
+def train_ddpg(cfg: ExperimentConfig, device: str, out_dir: Path):
+    agent, train_df = train_agent("DDPG", DDPGAgent, cfg, device, out_dir)
+    train_df.to_csv(out_dir / "training_log.csv", index=False)
+    return agent, train_df
+
+
+def evaluate_algorithm(name: str, cfg: ExperimentConfig, agents: Dict[str, RLAgent]):
     env = NomaSecurityEnv(cfg)
     rng = np.random.default_rng(cfg.seed + 123)
 
@@ -113,9 +138,8 @@ def evaluate_algorithm(name: str, cfg: ExperimentConfig, agent: DDPGAgent | None
         for _ in range(cfg.episode_steps):
             t0 = time.perf_counter()
 
-            if name == "DDPG":
-                assert agent is not None
-                action = agent.select_action(env._build_state(), noise_std=0.0)
+            if name in agents:
+                action = agents[name].select_action(env._build_state(), noise_std=0.0)
             elif name == "Random":
                 action = random_action(rng)
             elif name == "Equal":
@@ -142,8 +166,7 @@ def evaluate_algorithm(name: str, cfg: ExperimentConfig, agent: DDPGAgent | None
 
                 action = grid_search_optimize(objective, resolution=cfg.grid_resolution)
             elif name == "DDPG_NoJammer":
-                assert agent is not None
-                raw = agent.select_action(env._build_state(), noise_std=0.0)
+                raw = agents["DDPG"].select_action(env._build_state(), noise_std=0.0)
                 action = ddpg_without_jammer(raw)
             else:
                 raise ValueError(f"Unknown algorithm: {name}")
@@ -180,7 +203,7 @@ def plot_results(train_df: pd.DataFrame, metrics_df: pd.DataFrame, out_dir: Path
         plt.plot(x, ma, linewidth=2.0, label="MA(50)")
     plt.xlabel("Episode")
     plt.ylabel("Reward")
-    plt.title("DDPG Training Convergence")
+    plt.title("RL Training Convergence")
     plt.legend()
     plt.tight_layout()
     plt.savefig(out_dir / "fig_training_convergence.png", dpi=160)
@@ -229,10 +252,37 @@ def main():
 
         json.dump(asdict(cfg), f, ensure_ascii=False, indent=2)
 
-    agent, train_df = train_ddpg(cfg, args.device, out_dir)
+    ddpg_agent, train_df = train_ddpg(cfg, args.device, out_dir)
+    td3_agent, td3_train_df = train_agent("TD3", TD3Agent, cfg, args.device, out_dir)
+    sac_agent, sac_train_df = train_agent("SAC", SACAgent, cfg, args.device, out_dir)
 
-    algos = ["DDPG", "Random", "Equal", "Heuristic", "PSO", "Grid", "DDPG_NoJammer"]
-    rows = [evaluate_algorithm(name, cfg, agent) for name in algos]
+    combined_train_df = pd.concat(
+        [
+            train_df.assign(algorithm="DDPG"),
+            td3_train_df.assign(algorithm="TD3"),
+            sac_train_df.assign(algorithm="SAC"),
+        ],
+        ignore_index=True,
+    )
+    combined_train_df.to_csv(out_dir / "rl_training_log.csv", index=False)
+
+    agents: Dict[str, RLAgent] = {
+        "DDPG": ddpg_agent,
+        "TD3": td3_agent,
+        "SAC": sac_agent,
+    }
+    algos = [
+        "DDPG",
+        "TD3",
+        "SAC",
+        "Random",
+        "Equal",
+        "Heuristic",
+        "PSO",
+        "Grid",
+        "DDPG_NoJammer",
+    ]
+    rows = [evaluate_algorithm(name, cfg, agents) for name in algos]
     metrics_df = pd.DataFrame(rows)
     metrics_df.to_csv(out_dir / "metrics_table.csv", index=False)
 

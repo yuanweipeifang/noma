@@ -23,7 +23,7 @@ class ExperimentConfig:
     lambda_sic: float = 5.0
     lambda_power: float = 10.0
 
-    # DDPG hyperparameters
+    # DDPG/TD3/SAC hyperparameters
     state_dim: int = 12
     action_dim: int = 3
     actor_lr: float = 1e-4
@@ -34,6 +34,14 @@ class ExperimentConfig:
     replay_size: int = 100_000
     warmup_steps: int = 1_000
     train_episodes: int = 3000
+
+    # TD3-specific hyperparameters
+    td3_policy_noise: float = 0.05
+    td3_noise_clip: float = 0.10
+    td3_policy_delay: int = 2
+
+    # SAC-specific hyperparameters
+    sac_alpha: float = 0.2
 
     # Evaluation settings
     eval_episodes: int = 200
