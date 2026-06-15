@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "src"
 if str(SRC) not in os.sys.path:
     os.sys.path.insert(0, str(SRC))
-os.environ.setdefault("MPLCONFIGDIR", str(ROOT / ".mplconfig"))
+os.environ.setdefault("MPLCONFIGDIR", str(ROOT / "outputs" / ".cache" / "matplotlib"))
 
 import matplotlib.pyplot as plt
 
@@ -349,7 +349,7 @@ def main():
     parser.add_argument("--eval-episodes", type=int, default=200)
     parser.add_argument("--device", type=str, default="cpu")
     parser.add_argument("--seed", type=int, default=42)
-    parser.add_argument("--results-dir", type=str, default=str(ROOT / "results"))
+    parser.add_argument("--results-dir", type=str, default=str(ROOT / "outputs" / "main"))
     parser.add_argument("--grid-resolution", type=int, default=21)
     parser.add_argument("--pso-particles", type=int, default=30)
     parser.add_argument("--pso-iters", type=int, default=50)
