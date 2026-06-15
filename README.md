@@ -41,8 +41,12 @@ noma_RL/
 │   ├── run_experiment.py
 │   └── run_extended_studies.py
 ├── docs/
-│   └── project_structure.md
+│   ├── project_structure.md
+│   └── results_index.md
 └── outputs/
+    ├── additional_figures/
+    ├── qos_sensitivity/
+    ├── sic_feasible_rate/
     ├── main/
     ├── extended/
     └── legacy/
@@ -58,6 +62,7 @@ noma_RL/
 - `scripts/run_experiment.py`：统一训练、评估、保存结果
 - `scripts/run_extended_studies.py`：扩展实验与消融分析
 - `docs/project_structure.md`：当前目录结构说明
+- `docs/results_index.md`：实验输出目录索引
 - `outputs/`：实验输出和历史结果归档
 
 ## 安装依赖

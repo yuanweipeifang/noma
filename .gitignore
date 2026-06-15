@@ -10,3 +10,5 @@ __pycache__/
 
 outputs/*
 !outputs/.gitkeep
+!outputs/additional_figures/
+!outputs/additional_figures/*
