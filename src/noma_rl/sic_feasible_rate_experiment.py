@@ -236,6 +236,32 @@ def grouped_bar_plot(df: pd.DataFrame, out_path: Path) -> None:
     plt.close()
 
 
+def plot_combined_metrics(df: pd.DataFrame, out_path: Path) -> None:
+    metrics = [
+        ("sic_feasible_rate", "SIC Feasible Rate"),
+        ("avg_sic_margin", "Average SIC Margin"),
+        ("avg_secrecy_sum", "Average Secrecy Sum Rate"),
+        ("qos_satisfaction_rate", "QoS Satisfaction Rate"),
+        ("secrecy_outage_prob", "Secrecy Outage Probability"),
+        ("avg_pj", "Average Jammer Power"),
+    ]
+    x = np.arange(len(df["algorithm"]))
+    fig, axes = plt.subplots(2, 3, figsize=(18, 9.2), sharex=True)
+
+    for ax, (metric, ylabel) in zip(axes.ravel(), metrics):
+        ax.bar(x, df[metric])
+        ax.set_title(ylabel)
+        ax.set_ylabel(ylabel)
+        ax.set_xticks(x)
+        ax.set_xticklabels(df["algorithm"], rotation=35, ha="right")
+        ax.grid(axis="y", linestyle="--", alpha=0.5)
+
+    fig.suptitle("SIC Feasibility and Constraint Comparison", fontsize=15)
+    fig.tight_layout(rect=(0, 0, 1, 0.96))
+    fig.savefig(out_path, dpi=300)
+    plt.close(fig)
+
+
 def run_sic_feasible_rate(
     out_dir: Path,
     eval_steps: int,
@@ -271,6 +297,7 @@ def run_sic_feasible_rate(
     bar_plot(df, "qos_satisfaction_rate", "QoS Satisfaction Rate", out_dir / "qos_satisfaction_comparison.png")
     bar_plot(df, "secrecy_outage_prob", "Secrecy Outage Probability", out_dir / "secrecy_outage_comparison.png")
     grouped_bar_plot(df, out_dir / "summary_security_qos_sic.png")
+    plot_combined_metrics(df, out_dir / "sic_feasible_rate_combined.png")
     return df
 
 

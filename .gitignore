@@ -7,8 +7,3 @@ __pycache__/
 .ruff_cache/
 
 .mplconfig/
-
-outputs/*
-!outputs/.gitkeep
-!outputs/additional_figures/
-!outputs/additional_figures/*

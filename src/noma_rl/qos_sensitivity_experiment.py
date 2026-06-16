@@ -143,6 +143,37 @@ def plot_metric(df: pd.DataFrame, metric: str, ylabel: str, out_path: Path) -> N
     plt.close()
 
 
+def plot_combined_metrics(df: pd.DataFrame, out_path: Path) -> None:
+    metrics = [
+        ("avg_secrecy_sum", "Average Secrecy Sum Rate"),
+        ("qos_satisfaction_rate", "QoS Satisfaction Rate"),
+        ("sic_feasible_rate", "SIC Feasible Rate"),
+        ("secrecy_outage_prob", "Secrecy Outage Probability"),
+        ("avg_decision_time_ms", "Average Decision Time (ms)"),
+    ]
+    fig, axes = plt.subplots(2, 3, figsize=(16, 8.8), sharex=True)
+    axes = axes.ravel()
+
+    for ax, (metric, ylabel) in zip(axes, metrics):
+        for alg in ALGORITHMS:
+            sub = df[df["algorithm"] == alg].sort_values("qos_threshold")
+            if len(sub) == 0:
+                continue
+            ax.plot(sub["qos_threshold"], sub[metric], marker="o", linewidth=1.8, label=alg)
+        ax.set_title(ylabel)
+        ax.set_xlabel("QoS Threshold R_min (bit/s/Hz)")
+        ax.set_ylabel(ylabel)
+        ax.grid(True, linestyle="--", alpha=0.5)
+
+    axes[-1].axis("off")
+    handles, labels = axes[0].get_legend_handles_labels()
+    fig.legend(handles, labels, loc="lower center", ncol=len(ALGORITHMS), frameon=False)
+    fig.suptitle("QoS Threshold Sensitivity", fontsize=15)
+    fig.tight_layout(rect=(0, 0.06, 1, 0.96))
+    fig.savefig(out_path, dpi=300)
+    plt.close(fig)
+
+
 def run_qos_sensitivity(
     out_dir: Path,
     thresholds: list[float],
@@ -186,6 +217,7 @@ def run_qos_sensitivity(
     plot_metric(df, "sic_feasible_rate", "SIC Feasible Rate", out_dir / "qos_vs_sic_feasible_rate.png")
     plot_metric(df, "secrecy_outage_prob", "Secrecy Outage Probability", out_dir / "qos_vs_secrecy_outage.png")
     plot_metric(df, "avg_decision_time_ms", "Average Decision Time (ms)", out_dir / "qos_vs_decision_time.png")
+    plot_combined_metrics(df, out_dir / "qos_sensitivity_combined.png")
     return df
 
 
