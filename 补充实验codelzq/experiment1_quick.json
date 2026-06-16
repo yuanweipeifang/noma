@@ -1,0 +1,2074 @@
+{
+  "0.5": {
+    "DDPG": {
+      "avg_reward": {
+        "mean": 1.7458230710198108,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 3.009765364635369,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.5537194530646055,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.5617107276472363,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.54,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.022749900817871094,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 9.9410400390625,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.98,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.3786950843496173,
+        "std": 0.0
+      }
+    },
+    "DDPG_wo_Jammer": {
+      "avg_reward": {
+        "mean": 0.7986617972475171,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 2.0832003614979437,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.562072391622814,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 1.79014110558518,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.58,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.022330284118652344,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.98,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.3393963281328143,
+        "std": 0.0
+      }
+    },
+    "Random": {
+      "avg_reward": {
+        "mean": 5.477486018303495,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 5.517711211275382,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 5.769568770078269,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.25185755880288746,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.86,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 3.634166717529297,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 6.173667179439325,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 0.5306600836485632,
+        "std": 0.0
+      }
+    },
+    "Equal": {
+      "avg_reward": {
+        "mean": -2.5558836744273425,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 3.604365162236606,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.9698309112405226,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.3736384648840613,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.03685474395751953,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 10.0,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.2306316715142547,
+        "std": 0.0
+      }
+    },
+    "Heuristic": {
+      "avg_reward": {
+        "mean": 0.5183080538413976,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 2.8484543183617363,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.355972437898393,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.5458625242889569,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.48,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.03918647766113281,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.76,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.4153125793078631,
+        "std": 0.0
+      }
+    },
+    "PSO": {
+      "avg_reward": {
+        "mean": 0.81961740911813,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 2.754668175534881,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.4319374754008733,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.6938406860288905,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.56,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 64.69878673553467,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 6.1210425096755845,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.76,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.1923297605293057,
+        "std": 0.0
+      }
+    },
+    "GridSearch": {
+      "avg_reward": {
+        "mean": 6.223690805120876,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 6.246465006284374,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 6.484410275462474,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.2379452691780997,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.88,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 35.32418251037598,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 7.133333333333335,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 0.34786205541241927,
+        "std": 0.0
+      }
+    }
+  },
+  "0.75": {
+    "DDPG": {
+      "avg_reward": {
+        "mean": 1.7317053373772568,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 2.8883606663348114,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.5374631147970392,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.6787339476059964,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.54,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.02658843994140625,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 9.961440086364746,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.98,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.412412125987345,
+        "std": 0.0
+      }
+    },
+    "DDPG_wo_Jammer": {
+      "avg_reward": {
+        "mean": 0.6698059666397169,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 2.058463993632025,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.5642298358151225,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 1.8158032646366211,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.5,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.024971961975097656,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.94,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.3012132412519326,
+        "std": 0.0
+      }
+    },
+    "Random": {
+      "avg_reward": {
+        "mean": 5.391356144663945,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 5.431581337635831,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 5.736086563622443,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.3045052259866101,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.86,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 3.8590621948242188,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 6.4031552271210295,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 0.5292953237385859,
+        "std": 0.0
+      }
+    },
+    "Equal": {
+      "avg_reward": {
+        "mean": -2.6470514908842,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 3.513197345779748,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.9698309112405226,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.4691401450930839,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.03792762756347656,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 10.0,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.2512331023661254,
+        "std": 0.0
+      }
+    },
+    "Heuristic": {
+      "avg_reward": {
+        "mean": 0.4134228503849397,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 2.743569114905279,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.355972437898393,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.662591510833832,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.48,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.03814220428466797,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.76,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.4167277883056857,
+        "std": 0.0
+      }
+    },
+    "PSO": {
+      "avg_reward": {
+        "mean": 0.7438950561798247,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 2.630053140220418,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.414814960128972,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.8164696713121107,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.52,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 68.61177444458008,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 6.403488335427389,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.78,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.1941383916862618,
+        "std": 0.0
+      }
+    },
+    "GridSearch": {
+      "avg_reward": {
+        "mean": 6.14324716463486,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 6.166021365798357,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 6.4293573252620195,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.263335959463662,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.88,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 37.755722999572754,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 7.177777777777778,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 0.3593912667794327,
+        "std": 0.0
+      }
+    }
+  },
+  "1.0": {
+    "DDPG": {
+      "avg_reward": {
+        "mean": 1.5333492356796918,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 2.7973793573089427,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.53543712994491,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.7809417854501703,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.5,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.02541065216064453,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 9.954093933105469,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.98,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.4437660832116361,
+        "std": 0.0
+      }
+    },
+    "DDPG_wo_Jammer": {
+      "avg_reward": {
+        "mean": 0.7252496330528703,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 1.9561010390915043,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.517080799745813,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 1.9905692115509206,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.58,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.02,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.02547740936279297,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.98,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.3095545702887115,
+        "std": 0.0
+      }
+    },
+    "Random": {
+      "avg_reward": {
+        "mean": 5.324253034733057,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 5.363074840780112,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 5.703738297492621,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.34066345671250725,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.88,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 4.167819023132324,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 6.509471603690356,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 0.5295337257306485,
+        "std": 0.0
+      }
+    },
+    "Equal": {
+      "avg_reward": {
+        "mean": -2.7201827219289316,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 3.4400661147350156,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.9698309112405226,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.545031199256443,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.04027843475341797,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 10.0,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.2660195935119305,
+        "std": 0.0
+      }
+    },
+    "Heuristic": {
+      "avg_reward": {
+        "mean": 0.3325172110120937,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 2.6626634755324323,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.355972437898393,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.7533642760489517,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.48,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.041069984436035156,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.76,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.4124349279264514,
+        "std": 0.0
+      }
+    },
+    "PSO": {
+      "avg_reward": {
+        "mean": 0.3752689809406047,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 2.5095450228686196,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.397242854656064,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.936780596147416,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.52,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 73.45310688018799,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 6.578561915891828,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.72,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.2098268345148027,
+        "std": 0.0
+      }
+    },
+    "GridSearch": {
+      "avg_reward": {
+        "mean": 6.083624305565739,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 6.098230514453357,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 6.387679229252473,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.28944871479911766,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.88,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 40.66536903381348,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 7.222222222222223,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 0.362088872714218,
+        "std": 0.0
+      }
+    }
+  },
+  "1.25": {
+    "DDPG": {
+      "avg_reward": {
+        "mean": 1.404146424300716,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 2.753483812832148,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.559233547170718,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.8726452484875317,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.5,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.02643108367919922,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 9.733885765075684,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.96,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.4512078016427443,
+        "std": 0.0
+      }
+    },
+    "DDPG_wo_Jammer": {
+      "avg_reward": {
+        "mean": 0.6217716269461794,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 1.9193530554046516,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.5099122365989417,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 2.0629704612107207,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.56,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.02,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.0273895263671875,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.96,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.2763796287857203,
+        "std": 0.0
+      }
+    },
+    "Random": {
+      "avg_reward": {
+        "mean": 5.267110483669041,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 5.305932289716098,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 5.70007883077834,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.39414654106224317,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.88,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 4.092016220092773,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 6.444518052297781,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 0.533701958716566,
+        "std": 0.0
+      }
+    },
+    "Equal": {
+      "avg_reward": {
+        "mean": -2.7809681689294625,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 3.3792806677344855,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.9698309112405226,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.608287114441297,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.039348602294921875,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 10.0,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.2756204907579238,
+        "std": 0.0
+      }
+    },
+    "Heuristic": {
+      "avg_reward": {
+        "mean": 0.26669390157066725,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 2.5968401660910065,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.355972437898393,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.827657310363958,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.48,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.041294097900390625,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.76,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.4066197688373783,
+        "std": 0.0
+      }
+    },
+    "PSO": {
+      "avg_reward": {
+        "mean": 0.5020395099097489,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 2.4380175353773774,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.4125545725974127,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 1.0369910653833758,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.58,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 72.42189407348633,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 6.486662299342054,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.76,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.1815182256166192,
+        "std": 0.0
+      }
+    },
+    "GridSearch": {
+      "avg_reward": {
+        "mean": 6.0334479124847284,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 6.047309258012274,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 6.378275886341218,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.33096662832894297,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.88,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 47.91191577911377,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 7.155555555555555,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 0.36781563646666127,
+        "std": 0.0
+      }
+    }
+  },
+  "1.5": {
+    "DDPG": {
+      "avg_reward": {
+        "mean": 1.3602426279086086,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 2.666356147315022,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.5193603721750897,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.9353944605056163,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.54,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.025305747985839844,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 9.617679595947266,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.94,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.454625554097675,
+        "std": 0.0
+      }
+    },
+    "DDPG_wo_Jammer": {
+      "avg_reward": {
+        "mean": 0.5925114312793444,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 1.9412071696849649,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.5340794174075993,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 2.024958038660323,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.52,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.025892257690429688,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.94,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.3039109125647483,
+        "std": 0.0
+      }
+    },
+    "Random": {
+      "avg_reward": {
+        "mean": 5.2175349611670105,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 5.257210864628384,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 5.6766267294134005,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.4194158647850166,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.86,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 4.173159599304199,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 6.664312285438217,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 0.5358329808831035,
+        "std": 0.0
+      }
+    },
+    "Equal": {
+      "avg_reward": {
+        "mean": -2.832387265438186,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 3.3278615712257613,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.9698309112405226,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.662615477378521,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.039544105529785156,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 10.0,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.2802523300711617,
+        "std": 0.0
+      }
+    },
+    "Heuristic": {
+      "avg_reward": {
+        "mean": 0.21165474791934646,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 2.5418010124396857,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.355972437898393,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.8903846787598073,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.48,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.04237651824951172,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.76,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.4013374950718662,
+        "std": 0.0
+      }
+    },
+    "PSO": {
+      "avg_reward": {
+        "mean": 0.45100880244412034,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 2.394369105342297,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.4308091622083396,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 1.1133186819308227,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.58,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 74.51266288757324,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 6.36642265267195,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.76,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.1779840134740225,
+        "std": 0.0
+      }
+    },
+    "GridSearch": {
+      "avg_reward": {
+        "mean": 5.991018822222575,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 6.006232848376361,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 6.302860027697007,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.29662717932064797,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.86,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 41.19206428527832,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 7.2888888888888905,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 0.3738854633267387,
+        "std": 0.0
+      }
+    }
+  },
+  "2.0": {
+    "DDPG": {
+      "avg_reward": {
+        "mean": 1.337900680464026,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 2.604423638959017,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.551064859234827,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 1.033202592863155,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.56,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.03074169158935547,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 9.907720565795898,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.96,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.4385223819468773,
+        "std": 0.0
+      }
+    },
+    "DDPG_wo_Jammer": {
+      "avg_reward": {
+        "mean": 0.6031416144795312,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 1.8606836235518711,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.5292946781051273,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 2.1932310626899407,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.54,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.02,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.027480125427246094,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.98,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.2775756440424635,
+        "std": 0.0
+      }
+    },
+    "Random": {
+      "avg_reward": {
+        "mean": 5.134748347273091,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 5.174424250734465,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 5.669508196372339,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.4985317940841005,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.86,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 4.317212104797363,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 6.454044913770128,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 0.5408419024031865,
+        "std": 0.0
+      }
+    },
+    "Equal": {
+      "avg_reward": {
+        "mean": -2.9177188130737104,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 3.2425300235902377,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.9698309112405226,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.7526694864138603,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.04207134246826172,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 10.0,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.2846220576268295,
+        "std": 0.0
+      }
+    },
+    "Heuristic": {
+      "avg_reward": {
+        "mean": 0.12391391597505716,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 2.454060180495396,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.355972437898393,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.9919156493497967,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.48,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.04,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.04376411437988281,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.76,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.3898429010694382,
+        "std": 0.0
+      }
+    },
+    "PSO": {
+      "avg_reward": {
+        "mean": 0.48623710896837413,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 2.314748361372834,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.4150968746501,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 1.1950114796908473,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.54,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 76.97356700897217,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 6.5080534436764435,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.78,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.1701108003879024,
+        "std": 0.0
+      }
+    },
+    "GridSearch": {
+      "avg_reward": {
+        "mean": 5.927107066721951,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 5.94330290889292,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 6.2660761222112935,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.3227732133183742,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.86,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 42.230591773986816,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 7.288888888888889,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 0.38665518826580325,
+        "std": 0.0
+      }
+    }
+  },
+  "3.0": {
+    "DDPG": {
+      "avg_reward": {
+        "mean": 1.1791307712155719,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 2.422985355267477,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.522760640398909,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 1.2405882768214371,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.58,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.02872467041015625,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 9.47421646118164,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.96,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.4090507309242148,
+        "std": 0.0
+      }
+    },
+    "DDPG_wo_Jammer": {
+      "avg_reward": {
+        "mean": 0.5024614901524962,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 1.8814458514705945,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.530949880079234,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 2.1893475235808606,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.54,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.04,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.02956867218017578,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.96,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.2563035761639156,
+        "std": 0.0
+      }
+    },
+    "Random": {
+      "avg_reward": {
+        "mean": 5.010106149090145,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 5.049782052551519,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 5.6539425449994205,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.6115185325845659,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.86,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 4.2577409744262695,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 6.373228992063263,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 0.5496971875720884,
+        "std": 0.0
+      }
+    },
+    "Equal": {
+      "avg_reward": {
+        "mean": -3.042261339004811,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 3.117987497659137,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.9698309112405226,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.88684395852204,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.04130840301513672,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 10.0,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.284978191356054,
+        "std": 0.0
+      }
+    },
+    "Heuristic": {
+      "avg_reward": {
+        "mean": 0.007184035337573942,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 2.3373302998579133,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.355972437898393,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 1.1368128093341703,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.48,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.04,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 0.04271507263183594,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 5.0,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.76,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.3711828910355077,
+        "std": 0.0
+      }
+    },
+    "PSO": {
+      "avg_reward": {
+        "mean": 0.021870262328688925,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 2.1935426847601667,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 3.4136708561885625,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 1.3565300687176034,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.54,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.02,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 75.41505336761475,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 6.610419469920048,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 0.7,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 1.1337397544060415,
+        "std": 0.0
+      }
+    },
+    "GridSearch": {
+      "avg_reward": {
+        "mean": 5.830260584607646,
+        "std": 0.0
+      },
+      "avg_secrecy_sum": {
+        "mean": 5.843790441476061,
+        "std": 0.0
+      },
+      "avg_legit_sum": {
+        "mean": 6.230529152310862,
+        "std": 0.0
+      },
+      "avg_eaves_sum": {
+        "mean": 0.3867387108348,
+        "std": 0.0
+      },
+      "qos_satisfaction_rate": {
+        "mean": 0.88,
+        "std": 0.0
+      },
+      "secrecy_outage_prob": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "avg_decision_time_ms": {
+        "mean": 42.02163219451904,
+        "std": 0.0
+      },
+      "avg_jammer_power": {
+        "mean": 7.2444444444444445,
+        "std": 0.0
+      },
+      "sic_feasible_rate": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "std_secrecy_sum": {
+        "mean": 0.40980197117375894,
+        "std": 0.0
+      }
+    }
+  }
+}
